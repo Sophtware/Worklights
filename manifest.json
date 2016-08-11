@@ -1,0 +1,14 @@
+{
+  "name": "Worklight",
+  "description": "Signals when it is time to work or rest using visual cues on your browser",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": {
+      "default_title": "Activate a routine",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
