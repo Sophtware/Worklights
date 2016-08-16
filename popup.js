@@ -6,9 +6,8 @@
 function click(e) {
   chrome.tabs.executeScript(null,
       {code:"\
-	alert(\"alert\");\
-	if (! document.body.className.match(/(?:^|\s)tint(?!\S)/) ){\
-	  document.body.className += \' tint\';\
+	if (! document.body.className.match(/(^tint)|( tint)/) ){\
+	  document.body.className += \" tint\";\
 	}\
     "});
 }
