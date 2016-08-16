@@ -5,8 +5,12 @@
 
 function click(e) {
   chrome.tabs.executeScript(null,
-      {code:"document.body.style.backgroundColor='" + e.target.id + "'"});
-  window.close();
+      {code:"\
+	alert(\"alert\");\
+	if (! document.body.className.match(/(?:^|\s)tint(?!\S)/) ){\
+	  document.body.className += \' tint\';\
+	}\
+    "});
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -15,3 +19,4 @@ document.addEventListener('DOMContentLoaded', function () {
     divs[i].addEventListener('click', click);
   }
 });
+//<div style="background-color: red; height:100%; width:100%; position: fixed; z-index: -1000"></div>

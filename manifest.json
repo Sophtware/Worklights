@@ -3,7 +3,7 @@
   "description": "Signals when it is time to work or rest using visual cues on your browser",
   "version": "1.0",
   "permissions": [
-    "tabs", "http://*/*", "https://*/*"
+    "tabs", "http://*/*", "https://*/*", "file://*/*"
   ],
   "browser_action": {
       "default_title": "Activate a routine",

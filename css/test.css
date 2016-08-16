@@ -1,0 +1,17 @@
+.tint:after {
+  content:'';
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    opacity: .3;
+    pointer-events: none;
+    background: orange;
+    width: 100%;
+    height: 100%;
+}
+
+.tint.dim:after {
+    background: black;
+    opacity: .6;
+}
