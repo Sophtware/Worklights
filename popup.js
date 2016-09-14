@@ -1,16 +1,18 @@
-// Copyright (c) 2012 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
+var insertionCode = 'function tint(){\
+  var className = "tint";\
+  var regex = new RegExp("(^"+className+")|( "+className+")");\
+  if(! document.body.className.match(regex) ){\
+    document.body.className += " " + className;\
+  }\
+}\
+tint();'
 
 function click(e) {
-  chrome.tabs.executeScript(null,
-      {code:"\
-	if (! document.body.className.match(/(^tint)|( tint)/) ){\
-	  document.body.className += \" tint\";\
-	}\
-    "});
+//  chrome.tabs.executeScript(null, {file: chrome.extension.getURL("js/tint.js")});
+  chrome.tabs.executeScript(null, {code: insertionCode});
+    window.close();
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
   var divs = document.querySelectorAll('div');
@@ -18,4 +20,3 @@ document.addEventListener('DOMContentLoaded', function () {
     divs[i].addEventListener('click', click);
   }
 });
-//<div style="background-color: red; height:100%; width:100%; position: fixed; z-index: -1000"></div>
