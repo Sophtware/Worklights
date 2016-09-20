@@ -1,55 +1,59 @@
 <!doctype html>
 <html>
   <head>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <title>Set Page Color Popup</title>
     <style>
     body {
       overflow: hidden;
-      margin: 0px;
+      margin: 1px;
       padding: 0px;
       background: white;
-    }
-
-    div:first-child {
-      margin-top: 0px;
     }
 
     div {
       cursor: pointer;
       text-align: center;
-      padding: 1px 3px;
       font-family: sans-serif;
       font-size: 0.8em;
-      width: 100px;
       margin-top: 1px;
+      background: #ffffff;
+    }
+    .tile:hover {
       background: #cccccc;
     }
-    div:hover {
-      background: #aaaaaa;
+    #grid {
+      margin: 5px;
+      width: auto;
+      -webkit-column-count: 2;
     }
-    #red {
-      border: 1px solid red;
-      color: red;
+    .tile {
+      width: 100px;
+      height: 75px;
+      padding-top: 25px;
     }
-    #blue {
-      border: 1px solid blue;
-      color: blue;
-    }
-    #green {
-      border: 1px solid green;
-      color: green;
-    }
-    #yellow {
-      border: 1px solid yellow;
-      color: yellow;
-    }
+    
     </style>
-    <script src="popup.js"></script>
+    <script src="popup.js"></script>    
   </head>
   <body>
-    <div id="tint">tint</div>
-    <div id="blue">blue</div>
-    <div id="green">green</div>
-    <div id="yellow">yellow</div>
+    <div id="grid">
+      <div class="tile">
+        <i class="fa fa-hourglass-start fa-5x" aria-hidden="true"></i>
+        <h2>Start</h2>
+      </div>
+      <div class="tile">
+        <i class="fa fa-hourglass-end fa-5x" aria-hidden="true"></i>
+        <h2>End</h2>
+      </div>
+      <div class="tile">
+        <i class="fa fa-times fa-5x" aria-hidden="true"></i>
+        <h2>Add to List</h2>
+      </div>
+      <div class="tile">
+        <i class="fa fa-cog fa-5x" aria-hidden="true"></i>
+        <h2>Setting</h2>
+      </div>
+    </div>
   </body>
 </html>
