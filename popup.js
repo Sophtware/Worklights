@@ -1,18 +1,14 @@
 var addTintFunction = 'function tint(){\
-  var className = "tint";\
-  var regex = new RegExp("(^"+className+")|( "+className+")");\
-  if(! document.body.className.match(regex) ){\
-    document.body.className += " " + className;\
-  }\
+    var className = "tint";\
+    var regex = new RegExp("(^"+className+")|( "+className+")");\
+    if(! document.body.className.match(regex) ){\
+        document.body.className += " " + className;\
+    }\
 }\
 tint();'
 
 var removeTintFunction = 'function removeTint(){\
-  var className = "tint";\
-  var regex = new RegExp("(^"+className+")|( "+className+")");\
-  if(! document.body.className.match(regex) ){\
-    document.body.className += " " + className;\
-  }\
+    document.body.className -= "tint";\
 }\
 removeTint();'
 
