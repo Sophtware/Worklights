@@ -28,6 +28,8 @@ function click(e) {
         chrome.notifications.create("test", opts, function(){});
     } else if (elementId == "end-button") {
         chrome.tabs.executeScript(null, {code: removeTintFunction});
+    } else if (elementId == "settings-button") {
+        chrome.runtime.openOptionsPage();
     }
     
     window.close();
