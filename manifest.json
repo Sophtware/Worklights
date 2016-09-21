@@ -1,13 +1,13 @@
 {
-  "name": "Worklight",
-  "description": "Signals when it is time to work or rest using visual cues on your browser",
+  "name": "Worklights",
+  "description": "Chrome productivity extension that Signals when it is time to work or rest using visual cues on your browser",
   "version": "1.0",
   "permissions": [
     "tabs", "http://*/*", "https://*/*", "file://*/*.html"
   ],
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*", "file://*/*.html"],
-    "css": ["css/test.css"],
+    "css": ["css/worklights.css"],
       "js": ["popup.js"]
   }],
   "browser_action": {

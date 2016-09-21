@@ -19,14 +19,17 @@
       margin-top: 1px;
       background: #ffffff;
     }
+
     .tile:hover {
       background: #cccccc;
     }
+    
     #grid {
       margin: 5px;
       width: auto;
       -webkit-column-count: 2;
     }
+    
     .tile {
       width: 100px;
       height: 75px;
@@ -39,11 +42,11 @@
   </head>
   <body>
     <div id="grid">
-      <div class="tile">
+      <div class="tile" id="start-button">
         <i class="fa fa-hourglass-start fa-5x" aria-hidden="true"></i>
         <h2>Start</h2>
       </div>
-      <div class="tile">
+      <div class="tile" id="end-button">
         <i class="fa fa-hourglass-end fa-5x" aria-hidden="true"></i>
         <h2>End</h2>
       </div>

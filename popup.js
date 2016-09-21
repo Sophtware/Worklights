@@ -1,4 +1,4 @@
-var insertionCode = 'function tint(){\
+var addTintFunction = 'function tint(){\
   var className = "tint";\
   var regex = new RegExp("(^"+className+")|( "+className+")");\
   if(! document.body.className.match(regex) ){\
@@ -7,8 +7,23 @@ var insertionCode = 'function tint(){\
 }\
 tint();'
 
+var removeTintFunction = 'function removeTint(){\
+  var className = "tint";\
+  var regex = new RegExp("(^"+className+")|( "+className+")");\
+  if(! document.body.className.match(regex) ){\
+    document.body.className += " " + className;\
+  }\
+}\
+removeTint();'
+
 function click(e) {
-    chrome.tabs.executeScript(null, {code: insertionCode});
+    var elementId = this.id;
+    if (elementId == "start-button") {
+        chrome.tabs.executeScript(null, {code: addTintFunction});
+    } else if (elementId == "end-button") {
+        chrome.tabs.executeScript(null, {code: removeTintFunction});
+    }
+    
     window.close();
 }
 
