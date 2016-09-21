@@ -1,4 +1,4 @@
-var notification-options = {
+var options = {
     type: "basic",
     title: "Worklights Reminder",
     message: "You have finished your current routine. Start another default routine?",
@@ -8,11 +8,11 @@ var notification-options = {
 
 function click(e) {
     var elementId = this.id;
-    if (elementId == "show-notification") {
-        chrome.notifications.create(notification-options, function(){});
+    if (elementId == "show-notifications") {
+        if (document.getElementById('show-notifications-checkbox').checked) {
+            chrome.notifications.create(options);
+        }
     }
-    
-    window.close();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
