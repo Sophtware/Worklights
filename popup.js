@@ -1,5 +1,5 @@
 var addTintFunction = 'function tint(){\
-    var className = "tint";\
+    var className = "tint animated infinite bounce";\
     var regex = new RegExp("(^"+className+")|( "+className+")");\
     if(! document.body.className.match(regex) ){\
         document.body.className += " " + className;\
@@ -8,7 +8,7 @@ var addTintFunction = 'function tint(){\
 tint();'
 
 var removeTintFunction = 'function removeTint(){\
-    document.body.className -= "tint";\
+    document.body.className -= "tint animated infinite bounce";\
 }\
 removeTint();'
 

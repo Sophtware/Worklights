@@ -7,7 +7,7 @@
   ],
   "content_scripts": [{
     "matches": ["http://*/*", "https://*/*", "file://*/*.html"],
-    "css": ["css/worklights.css"],
+    "css": ["css/worklights.css", "css/animate.css"],
     "js": ["popup.js"]
   }],
   "browser_action": {
