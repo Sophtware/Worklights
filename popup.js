@@ -12,10 +12,18 @@ var removeTintFunction = 'function removeTint(){\
 }\
 removeTint();'
 
+var opts = {
+  type: "basic",
+  title: "Primary Title",
+  message: "Primary message to display",
+  iconUrl: "icon.png"
+}
+
 function click(e) {
     var elementId = this.id;
     if (elementId == "start-button") {
         chrome.tabs.executeScript(null, {code: addTintFunction});
+        chrome.notifications.create("test", opts);
     } else if (elementId == "end-button") {
         chrome.tabs.executeScript(null, {code: removeTintFunction});
     }
