@@ -1,10 +1,14 @@
-var insertionCode = 'function tint(){\
-  var className = "tint";\
-  var regex = new RegExp("(^"+className+")|( "+className+")");\
+var insertionCode = 'var className = "tint";\
+var regex = new RegExp("(^"+className+")|( "+className+")");\
+function activateTint(){\
   if(! document.body.className.match(regex) ){\
     document.body.className += " " + className;\
   }\
 }\
+function tint(){\
+  window.setTimeout(activateTint,3000);\
+}\
+\
 tint();'
 
 function click(e) {
