@@ -1,10 +1,3 @@
-var opts = {
-  type: "basic",
-  title: "Primary Title",
-  message: "Primary message to display",
-  iconUrl: "icon.png"
-}
-
 var addTintFunction = 'function tint(){\
     var className = "tint";\
     var regex = new RegExp("(^"+className+")|( "+className+")");\
@@ -19,13 +12,10 @@ var removeTintFunction = 'function removeTint(){\
 }\
 removeTint();'
 
-
-
 function click(e) {
     var elementId = this.id;
     if (elementId == "start-button") {
         chrome.tabs.executeScript(null, {code: addTintFunction});
-        chrome.notifications.create("test", opts, function(){});
     } else if (elementId == "end-button") {
         chrome.tabs.executeScript(null, {code: removeTintFunction});
     } else if (elementId == "settings-button") {
@@ -34,7 +24,6 @@ function click(e) {
     
     window.close();
 }
-
 
 document.addEventListener('DOMContentLoaded', function () {
     var divs = document.querySelectorAll('div');
