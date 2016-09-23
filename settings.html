@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Worklights Settings</title>
+
+	<!-- Materialize files -->
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+	<!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script src="settings.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="col s6 offset-s3">
+			<center><h4>Worklights Settings</h4></center>
+			<hr>
+			<br>
+			<center><a class="waves-effect waves-light btn" href="schedule.html">schedule</a></center>
+			<form action="#">
+				<h6>Choose a tint color:</h6>
+				<div>
+					<input name="color" class="with-gap" type="radio" id="orange" checked/>
+     				<label for="orange">Orange</label>
+				</div>
+				<div>
+					<input name="color" class="with-gap" type="radio" id="red" />
+     				<label for="red">Red</label>
+				</div>
+				<div>
+					<input name="color" class="with-gap" type="radio" id="blue" />
+     				<label for="blue">Blue</label>
+				</div>
+				<div>
+					<input name="color" class="with-gap" type="radio" id="green" />
+     				<label for="green">Green</label>
+				</div>
+
+				<br>
+
+				<div id="use-bounce-animation">
+					<input type="checkbox" class="filled-in" id="bounce-checkbox" checked="checked" />
+					<label for="bounce-checkbox">Use bounce animation</label>
+			    </div>
+
+			    <br>
+			    
+			    <div id="show-notifications">
+					<input type="checkbox" class="filled-in" id="show-notifications-checkbox" checked="checked" />
+					<label for="show-notifications-checkbox">Show pop-up notifications</label>
+			    </div>
+
+			    <br>
+
+				<div class="input-field">
+					<h6>Add a website to your blocked list:</h6>
+					<input id="website" type="text" class="validate">
+				</div>
+
+				<div class="collection">
+					<a href="#!" class="collection-item">https://www.facebook.com/</a>
+					<a href="#!" class="collection-item">https://www.amazon.com/</a>
+					<a href="#!" class="collection-item">https://www.netflix.com/</a>
+					<a href="#!" class="collection-item">https://mail.google.com/</a>
+					<a href="#!" class="collection-item">https://www.hulu.com/</a>
+				</div>
+
+			    <br>
+			    <hr>
+			    <br>
+
+			    <div id="submit-button" class="center">
+				    <button class="btn waves-effect waves-light" type="submit" name="action">Save Settings
+						<i class="material-icons right">send</i>
+					</button>
+				</div>
+		  </form>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

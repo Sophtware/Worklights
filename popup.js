@@ -1,26 +1,37 @@
-var insertionCode = 'var className = "tint";\
-var regex = new RegExp("(^"+className+")|( "+className+")");\
-function activateTint(){\
-  if(! document.body.className.match(regex) ){\
-    document.body.className += " " + className;\
+  var addTintFunction = 'var className = "tint animated infinite bounce";\
+  var regex = new RegExp("(^"+className+")|( "+className+")");\
+  function activateTint(){\
+    if(! document.body.className.match(regex) ){\
+      document.body.className += " " + className;\
+    }\
   }\
+  function tint(){\
+    window.setTimeout(activateTint,3000);\
+  }\
+  \
+  tint();'
+
+var removeTintFunction = 'function removeTint(){\
+    document.body.className -= "tint animated infinite bounce";\
 }\
-function tint(){\
-  window.setTimeout(activateTint,3000);\
-}\
-\
-tint();'
+removeTint();'
 
 function click(e) {
-//  chrome.tabs.executeScript(null, {file: chrome.extension.getURL("js/tint.js")});
-  chrome.tabs.executeScript(null, {code: insertionCode});
+    var elementId = this.id;
+    if (elementId == "start-button") {
+        chrome.tabs.executeScript(null, {code: addTintFunction});
+    } else if (elementId == "end-button") {
+        chrome.tabs.executeScript(null, {code: removeTintFunction});
+    } else if (elementId == "settings-button") {
+        chrome.runtime.openOptionsPage();
+    }
+    
     window.close();
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
-  var divs = document.querySelectorAll('div');
-  for (var i = 0; i < divs.length; i++) {
-    divs[i].addEventListener('click', click);
-  }
+    var divs = document.querySelectorAll('div');
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].addEventListener('click', click);
+    }
 });
