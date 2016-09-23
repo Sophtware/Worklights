@@ -1,9 +1,7 @@
 @keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    75%  {background-color: green;}
-    100% {background-color: red;}
+    0%   {opacity: 0.0;}
+    80% {opacity: 0.6;}
+    100% {opacity: 0.0;}
 }
 .tint:after {
     content: '';
@@ -13,7 +11,7 @@
     left: 0;
     opacity: .3;
     pointer-events: none;
-    background: orange;
+    background: red;
     animation-name: example;
     animation-duration: 4s;
     animation-iteration-count: infinite;
