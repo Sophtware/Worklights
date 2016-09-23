@@ -16,7 +16,7 @@ var removeTintFunction = 'function removeTint(){\
       }\
       removeTint();'
 
-var progressBar1 = document.createElement('div');
+/*var progressBar1 = document.createElement('div');
   progressBar1.style.height = '5px';
   progressBar1.style.width = '20%';
   progressBar1.style.backgroundColor = 'blue';
@@ -45,6 +45,7 @@ var progressBar3 = document.createElement('div');
   progressBar3.style.bottom=0;
   progressBar3.style.left='50%';
   document.body.insertAdjacentElement('beforeend',progressBar3);
+  */
 function click(e) {
     var elementId = this.id;
     if (elementId == "start-button") {

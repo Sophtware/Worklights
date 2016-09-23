@@ -10,7 +10,7 @@ function click(e) {
     var elementId = this.id;
     if (elementId == "show-notifications") {
         if (document.getElementById('show-notifications-checkbox').checked) {
-            chrome.notifications.create(options);
+            window.setTimeout(function hi(){chrome.notifications.create(options)}, 90000);
         }
     }
 }
