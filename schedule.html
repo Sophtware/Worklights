@@ -3,14 +3,18 @@
 	<head>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		
-		<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"/>
 
-		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery.js"></script>
 
- 		<script type="text/javascript" src="js/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 
-		<script type="text/javascript" src="materialize/js/materialize.js"></script>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
+
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/datepicker.css">
+
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript" src="bootstrap/js/bootstrap-datepicker.js"></script>
 
 		<script type="text/javascript" src="schedule.js"></script>
 
@@ -19,254 +23,261 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col s6 offset-s3">
-				<center><h4>Worklights Schedule</h4></center>
-				<hr>
+			<center><h2>Worklights Schedule</h2></center>
+			<hr>
+			<br>
+
+			<div class="col-sm-4 col-sm-offset-1">
+				<center><h3>Pick A Date</h3></center>
+				<center>
+					<div class="datepicker"></div>
+				</center>
 				<br>
+				<div class="col-sm-10 col-sm-offset-1">
+				<center><h3>Add Reminder</h3></center>
+					<br>
+					<form action="#">
+						<div class="form-group">
+							<input class="form-control" id="time" placeholder="Time">
+						</div>
+						<br>
+						<div class="form-group">
+							<!-- <label for="exampleInputPassword1">Password</label> -->
+							<input class="form-control" id="task" placeholder="Task">
+						</div>
 
-				<input type="date" class="datepicker">
+						<button id="submit" type="submit" class="btn btn btn-primary">Submit</button>
+					</form>
+				</div>
+			</div>
 
-				<table class="centered">
-				<thead>
-					<tr>
-						<th data-field="time">Hours</th>
-						<th data-field="schedule">schedule</th>
+			<div class="col-sm-6" >
+				<center><h3 id="current-date">Current Schedule</h3></center>
+				<table class="table text-center">
+				<thead class="text-center">
+					<tr class="text-center">
+						<th data-field="time" class="text-center">Hours</th>
+						<th data-field="schedule" class="text-center">tasks</th>
+						<th data-field="schedule" class="text-center">routine</th>
 					</tr>
 				</thead>
-
 				<tbody>
-
-					<tr>
-						<td>8 AM</td>
-						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
-							    <li><a class="default1" href="#!">Default</a></li>
-							    <li><a class="hw1" href="#!">HW</a></li>
-							    <li><a class="weekend1" href="#!">Weekend HW</a></li>
-							  </ul>
-						</td>
-					</tr>
-
-					<tr>
+					<tr id="9am">
 						<td>9 AM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+								<ul class="dropdown-menu">
+									<li><a class="default" href="#!">Default</a></li>
+							    	<li><a class="hw" href="#!">HW</a></li>
+							    	<li><a class="weekend" href="#!">Weekend HW</a></li>
+								</ul>
+							</div>
 
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
-							    <li><a class="default2" href="#!">Default</a></li>
-							    <li><a class="hw2" href="#!">HW</a></li>
-							    <li><a class="weekend2" href="#!">Weekend HW</a></li>
-							  </ul>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="10am">
 						<td>10 AM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
-							    <li><a class="default3" href="#!">Default</a></li>
-							    <li><a class="hw3" href="#!">HW</a></li>
-							    <li><a class="weekend3" href="#!">Weekend HW</a></li>
-							  </ul>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
+							    <li><a class="default" href="#!">Default</a></li>
+							    <li><a class="hw" href="#!">HW</a></li>
+							    <li><a class="weekend" href="#!">Weekend HW</a></li>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="11am">
 						<td>11 AM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
-							    <li><a class="default4" href="#!">Default</a></li>
-							    <li><a class="hw4" href="#!">HW</a></li>
-							    <li><a class="weekend4" href="#!">Weekend HW</a></li>
-							  </ul>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
+							    <li><a class="default" href="#!">Default</a></li>
+							    <li><a class="hw" href="#!">HW</a></li>
+							    <li><a class="weekend" href="#!">Weekend HW</a></li>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="12pm">
 						<td>12 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="1pm">
 						<td>1 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="2pm">
 						<td>2 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="3pm">
 						<td>3 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="4pm">
 						<td>4 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="5pm">
 						<td>5 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="6pm">
 						<td>6 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="7pm">
 						<td>7 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
-						<td>18 PM</td>
+					<tr id="8pm">
+						<td>8 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
-						<td>9 PM</td>
-						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
-							    <li><a class="default" href="#!">Default</a></li>
-							    <li><a class="hw" href="#!">HW</a></li>
-							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
-						</td>
-					</tr>
-
-					<tr>
+					<tr id="9pm">
 						<td>10 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-					<tr>
+					<tr id="10pm">
 						<td>11 PM</td>
+						<td class="task"></td>
 						<td>
-							  <a class='dropdown-button btn-floating add' href='#' data-activates='dropdown1'><i class="material-icons">add</i></a>
-
-							  
-							  <ul id='dropdown1' class='dropdown-content'>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+							  <ul class="dropdown-menu">
 							    <li><a class="default" href="#!">Default</a></li>
 							    <li><a class="hw" href="#!">HW</a></li>
 							    <li><a class="weekend" href="#!">Weekend HW</a></li>
-							  </ul>
+								</ul>
+							</div>
 						</td>
 					</tr>
-
-
-
-
 
 				</tbody>
 				</table>
 			</div>
+
 		</div>
 	</div>
 
