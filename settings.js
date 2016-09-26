@@ -6,15 +6,6 @@ var options = {
     buttons: [{title: "Yes"}, {title: "No"}]
 }
 
-function click(e) {
-    var elementId = this.id;
-    if (elementId == "show-notifications") {
-        if (document.getElementById('show-notifications-checkbox').checked) {
-            window.setTimeout(function hi(){chrome.notifications.create(options)}, 90000);
-        }
-    }
-}
-
 $(document).ready(function() {
     $("#add-blocked-website").on("keydown", function search(e) {
         if(e.keyCode == 13) {
@@ -29,11 +20,10 @@ $(document).ready(function() {
         $("#saved-settings-success").removeClass("hidden");
         $('html, body').animate({ scrollTop: 0 }, 0);
     });
-});
 
-document.addEventListener('DOMContentLoaded', function () {
-    var divs = document.querySelectorAll('div');
-    for (var i = 0; i < divs.length; i++) {
-        divs[i].addEventListener('click', click);
-    }
+    $("#show-notifications-checkbox").click(function() {
+        if ($("#show-notifications-checkbox").is(':checked')) {
+            window.setTimeout(function hi(){chrome.notifications.create(options)}, 5400);
+        }
+    });
 });
