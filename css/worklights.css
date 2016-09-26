@@ -27,6 +27,10 @@
     margin-top: 25px;
 }
 
+.margin-top-10 {
+    margin-top: 10px;
+}
+
 #routine-slider .slider-track-high {
     background: #5bc0de;
 }
@@ -41,4 +45,10 @@
 
 #routine-slider {
     width: 100%;
+}
+
+input#routine-time {
+    width: 35px;
+    height: 20px;
+    display: inline;
 }

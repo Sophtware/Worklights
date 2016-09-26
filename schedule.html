@@ -70,19 +70,20 @@
 						<br>
 
 						<!-- Range slider, low and high tracks, and selection: -->
-						<input id="routine-slider" type="text"/>
+						<input id="routine-slider" type="text" data-slider-tooltip="hide" />
 
 						<br>
 						<br>
 
-						Total time: 3 hours
+						Total time: <input class="form-control" id="routine-time" value="3"> hours
 
 						<br>
 
-						<span class="label label-info">Work</span>
-						<span class="label label-danger">Rest</span>
-
-						<br>
+						<div class="margin-top-10">
+							<span class="label label-info">Work</span>
+							<span class="label label-danger">Rest</span>
+						</div>
+						
 						<br>
 
 						<center><button id="submit-routine" type="submit" class="btn btn btn-primary">Submit</button></center>
@@ -101,6 +102,54 @@
 					</tr>
 				</thead>
 				<tbody>
+					<tr id="6am">
+						<td>6 AM</td>
+						<td class="task"></td>
+						<td>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+								<ul class="dropdown-menu">
+									<li><a class="default" href="#!">Default</a></li>
+							    	<li><a class="hw" href="#!">HW</a></li>
+							    	<li><a class="weekend" href="#!">Weekend HW</a></li>
+								</ul>
+							</div>
+
+						</td>
+					</tr>
+					<tr id="7am">
+						<td>7 AM</td>
+						<td class="task"></td>
+						<td>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+								<ul class="dropdown-menu">
+									<li><a class="default" href="#!">Default</a></li>
+							    	<li><a class="hw" href="#!">HW</a></li>
+							    	<li><a class="weekend" href="#!">Weekend HW</a></li>
+								</ul>
+							</div>
+
+						</td>
+					</tr>
+					<tr id="8am">
+						<td>8 AM</td>
+						<td class="task"></td>
+						<td>
+							<div class="dropdown">
+								<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Routine
+								</span></button>
+								<ul class="dropdown-menu">
+									<li><a class="default" href="#!">Default</a></li>
+							    	<li><a class="hw" href="#!">HW</a></li>
+							    	<li><a class="weekend" href="#!">Weekend HW</a></li>
+								</ul>
+							</div>
+
+						</td>
+					</tr>
 					<tr id="9am">
 						<td>9 AM</td>
 						<td class="task"></td>

@@ -29,10 +29,19 @@ $(function() {
 	$(".default").click(function(){
 		counter = 1;
 		trs = $(this).parent().parent().parent().parent().parent();
-		for (i = 0; i < 1; i++) {
+		for (i = 0; i < 2; i++) {
 			$(trs).css( "background-color", "#5bc0de" );
 			trs = $(trs).next();
+		}
 
+		for (i = 0; i < 1; i++) {
+			$(trs).css( "background-color", "#d9534f" );
+			trs = $(trs).next();
+		}
+
+		for (i = 0; i < 2; i++) {
+			$(trs).css( "background-color", "#5bc0de" );
+			trs = $(trs).next();
 		}
 	});
 
