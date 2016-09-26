@@ -6,7 +6,7 @@
     "tabs", "notifications", "http://*/*", "https://*/*", "file://*/*.html"
   ],
   "content_scripts": [{
-    "matches": ["https://quora.com/*",
+    "matches": ["https://www.quora.com/*",
     "https://www.facebook.com/*",
     "https://www.youtube.com/*",
     "https://www.reddit.com/*",
@@ -18,7 +18,7 @@
     ],
 
     "css": ["css/worklights.css", "css/animate.css"],
-    "js": ["pop.js"]
+    "js": ["popup.js"]
   },
   {"matches": ["http://*/*", "https://*/*"],
     "js": ["progressBar.js"]
