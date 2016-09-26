@@ -46,32 +46,32 @@
 
 			<br>
 
-		    <div class="checkbox use-bounce-animation">
-				<label>
-					<input type="checkbox" value="checked">
-					<b>Use bounce animation</b>
-				</label>
-			</div>
+		    <b>Choose an animation:</b>
+			<select class="form-control">
+				<option>None</option>
+				<option selected>Bounce</option>
+				<option>Flash</option>
+				<option>Zoom</option>
+			</select>
 
-			<div></div>
+			<br>
 
 			<div class="checkbox show-notifications">
 				<label>
-					<input type="checkbox" id="show-notifications-checkbox" value="checked">
+					<input type="checkbox" id="show-notifications-checkbox">
 					<b>Show pop-up notifications</b>
 				</label>
 			</div>
 
 		    <br>
 
-		    <form>
-				<div class="form-group">
-					<label for="add-blocked-website">Add a website to your blocked list:</label>
-					<input type="email" class="form-control" id="add-blocked-website" placeholder="https://www.website.com/">
-				</div>
-			</form>
-
-			<table class="table table-striped table-hover">
+		    
+			<div class="form-group">
+				<label for="add-blocked-website">Add a website to your blocked list:</label>
+				<input type="text" class="form-control" id="add-blocked-website" placeholder="https://www.website.com/">
+			</div>
+		
+			<table class="table table-striped table-hover" id="blocked-table">
 				<thead>
 					<tr>
 						<th>

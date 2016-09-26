@@ -15,6 +15,15 @@ function click(e) {
     }
 }
 
+$(document).ready(function() {
+    $("#add-blocked-website").on("keydown", function search(e) {
+        if(e.keyCode == 13) {
+
+            $('#blocked-table tr:last').after('<tr><td>' + $(this).val() + '</td></tr>');
+        }
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function () {
     var divs = document.querySelectorAll('div');
     for (var i = 0; i < divs.length; i++) {
