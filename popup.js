@@ -16,14 +16,6 @@ var removeTintFunction = 'function removeTint(){\
       }\
       removeTint();'
 
-      var options = {
-    type: "basic",
-    title: "Worklights Reminder",
-    message: "You have finished your current routine. Start another default routine?",
-    iconUrl: "icon.png",
-    buttons: [{title: "Yes"}, {title: "No"}]
-}
-
 function click(e) {
     var elementId = this.id;
     if (elementId == "start-button") {

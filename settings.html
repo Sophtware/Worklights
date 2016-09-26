@@ -19,6 +19,8 @@
 
 	<link rel="stylesheet" type="text/css" href="css/worklights.css">
 
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
 	<script type="text/javascript" src="js/bootstrap-slider.js"></script>
 
 	<script src="settings.js"></script>
@@ -51,11 +53,16 @@
 			<br>
 
 		    <b>Choose an animation:</b>
-			<select class="form-control">
-				<option>None</option>
-				<option selected>Bounce</option>
-				<option>Flash</option>
-				<option>Zoom</option>
+			<select class="form-control" id="select-animation">
+				<option value="none">None</option>
+				<option value="bounce" selected>Bounce</option>
+				<option value="jello">Jello</option>
+				<option value="pulse">Pulse</option>
+				<option value="flash">Flash</option>
+				<option value="shake">Shake</option>
+				<option value="swing">Swing</option>
+				<option value="tada">Tada</option>
+				<option value="wobble">Wobble</option>
 			</select>
 
 			<br>
