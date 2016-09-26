@@ -23,6 +23,12 @@ $(document).ready(function() {
             $("#added-website-success").removeClass("hidden");
         }
     });
+
+    $("#save-settings").click(function(event) {
+        event.preventDefault();
+        $("#saved-settings-success").removeClass("hidden");
+        $('html, body').animate({ scrollTop: 0 }, 0);
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function () {
