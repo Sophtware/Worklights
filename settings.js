@@ -23,7 +23,15 @@ $(document).ready(function() {
 
     $("#show-notifications-checkbox").click(function() {
         if ($("#show-notifications-checkbox").is(':checked')) {
-            window.setTimeout(function hi(){chrome.notifications.create(options)}, 90000);
+            window.setTimeout(function hi(){chrome.notifications.create(options)}, 10000);
         }
     });
+});
+
+chrome.notifications.onButtonClicked.addListener(function(notifId, btnIdx) {
+    if (btnIdx === 0) {
+        chrome.notifications.clear(notifId);
+    } else if (btnIdx === 1) {
+        chrome.notifications.clear(notifId);
+    }
 });
