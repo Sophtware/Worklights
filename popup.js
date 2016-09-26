@@ -24,6 +24,8 @@ function click(e) {
         chrome.tabs.executeScript(null, {code: removeTintFunction});
     } else if (elementId == "settings-button") {
         chrome.runtime.openOptionsPage();
+    } else if (elementId == "block-button") {
+        chrome.notifications.create(options);
     }
     
     window.close();

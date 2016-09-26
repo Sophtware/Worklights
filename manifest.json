@@ -18,7 +18,7 @@
     ],
 
     "css": ["css/worklights.css", "css/animate.css"],
-    "js": ["popup.js"]
+    "js": ["pop.js"]
   },
   {"matches": ["http://*/*", "https://*/*"],
     "js": ["progressBar.js"]
