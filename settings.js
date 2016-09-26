@@ -23,7 +23,7 @@ $(document).ready(function() {
 
     $("#show-notifications-checkbox").click(function() {
         if ($("#show-notifications-checkbox").is(':checked')) {
-            window.setTimeout(function hi(){chrome.notifications.create(options)}, 5400);
+            window.setTimeout(function hi(){chrome.notifications.create(options)}, 90000);
         }
     });
 });
