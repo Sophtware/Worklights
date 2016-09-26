@@ -16,6 +16,14 @@ var removeTintFunction = 'function removeTint(){\
       }\
       removeTint();'
 
+      var options = {
+    type: "basic",
+    title: "Worklights Reminder",
+    message: "You have finished your current routine. Start another default routine?",
+    iconUrl: "icon.png",
+    buttons: [{title: "Yes"}, {title: "No"}]
+}
+
 function click(e) {
     var elementId = this.id;
     if (elementId == "start-button") {
@@ -25,7 +33,7 @@ function click(e) {
     } else if (elementId == "settings-button") {
         chrome.runtime.openOptionsPage();
     } else if (elementId == "block-button") {
-        chrome.notifications.create(options);
+        chrome.tabs.executeScript(null, {code: 'alert("Success! This website will be blocked in the future.");'});
     }
     
     window.close();
