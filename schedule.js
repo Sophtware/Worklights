@@ -26,8 +26,6 @@ $(function() {
 		}
 	});
 
-
-
 	$(".default").click(function(){
 		counter = 1;
 		trs = $(this).parent().parent().parent().parent().parent();
@@ -38,7 +36,6 @@ $(function() {
 		}
 	});
 
-
 	$(".weekend").click(function(){
 		counter = 1;
 		trs = $(this).parent().parent().parent().parent().parent();
@@ -48,12 +45,19 @@ $(function() {
 
 		}
 	});
-	
 
 	$(".table-condensed td").click(function(){
 		day = $(this).html();
 		date = $($(this).parent().parent().parent().find("thead").find(".datepicker-switch")).html();
 		$("#current-date").html(day + " " + date);
+	});
+
+	$("#routine-slider").slider({ 
+		id: "routine-slider", 
+		min: 0, 
+		max: 10, 
+		range: true, 
+		value: [3, 7]
 	});
 
 

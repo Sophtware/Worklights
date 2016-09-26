@@ -19,6 +19,12 @@
 
 		<script type="text/javascript" src="schedule.js"></script>
 
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-slider.css">
+
+		<link rel="stylesheet" type="text/css" href="css/worklights.css">
+
+		<script type="text/javascript" src="js/bootstrap-slider.js"></script>
+
 	</head>
 	<body>
 
@@ -47,22 +53,39 @@
 							<input class="form-control" id="task" placeholder="Task">
 						</div>
 
+						<br>
+
 						<center><button id="submit" type="submit" class="btn btn btn-primary">Submit</button></center>
 					</form>
 				</div>
 
-				<div class="col-sm-10 col-sm-offset-1">
+				<div class="col-sm-10 col-sm-offset-1 margin-top-25">
 					<center><h3>Add A Routine</h3></center>
-					<br>
 					<form action="#">
+						<br>
 						<div class="form-group">
-							<input class="form-control" id="time" placeholder="Time">
-						</div>
-						<div class="form-group">
-							<input class="form-control" id="task" placeholder="Task">
+							<input class="form-control" id="routine-name" placeholder="Routine Name">
 						</div>
 
-						<center><button id="submit" type="submit" class="btn btn btn-primary">Submit</button></center>
+						<br>
+
+						<!-- Range slider, low and high tracks, and selection: -->
+						<input id="routine-slider" type="text"/>
+
+						<br>
+						<br>
+
+						Total time: 3 hours
+
+						<br>
+
+						<span class="label label-info">Work</span>
+						<span class="label label-danger">Rest</span>
+
+						<br>
+						<br>
+
+						<center><button id="submit-routine" type="submit" class="btn btn btn-primary">Submit</button></center>
 					</form>
 				</div>
 			</div>
