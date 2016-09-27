@@ -1,13 +1,12 @@
 $(function() {
 
     $("#submit-routine").on("click", function search(e) {
-        // if(e.keyCode == 13) {
-            $('#routines tr:last').after('<tr><td>' + $("#routine-name").val()
-            	+ '</td><td>'+ $("#routine-time").val()+' hr' +'</td></tr>');
-            $("#routine-name").val("");
-            $("#routine-time").val("");
-            $("#routine-created-success").removeClass("hidden");
-        // }
+    	e.preventDefault();
+        $('#routines tr:last').after('<tr><td>' + $("#routine-name").val()
+        	+ '</td><td>'+ $("#routine-time").val()+' hr' +'</td></tr>');
+        $("#routine-name").val("");
+        $("#routine-time").val("");
+        $("#routine-created-success").removeClass("hidden");
     });
 
 	$('.datepicker').datepicker({
