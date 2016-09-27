@@ -3,7 +3,7 @@ $(function() {
     $("#submit-routine").on("click", function search(e) {
     	e.preventDefault();
         $('#routines tr:last').after('<tr><td>' + $("#routine-name").val()
-        	+ '</td><td>'+ $("#routine-time").val()+' hr' +'</td></tr>');
+        	+ '</td><td>'+ $("#routine-time").val()+' hrs' +'</td></tr>');
         $("#routine-name").val("");
         $("#routine-time").val("");
         $("#routine-created-success").removeClass("hidden");
