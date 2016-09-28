@@ -12,7 +12,8 @@ $(function() {
 	$('.datepicker').datepicker({
 	});
 
-	$("#submit").click(function(){
+	$("#submit").click(function(e){
+		e.preventDefault();
 		time = $("#time").val();
 		task = $("#task").val();
 		console.log(time);
